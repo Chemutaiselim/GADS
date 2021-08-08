@@ -1,5 +1,6 @@
 fun main(args:Array<String>) {
-   var q:Quest?=null
+   //var q:Quest?=null
+    var q = Quest()
     // we can set the q to be of type question
 
     // to make it null we add a question mark at the end of it
@@ -21,6 +22,7 @@ fun main(args:Array<String>) {
     var message=
         //Kotlin doesnt come with a switch statement, it instead uses when.
         //WE can replace the if with when.
+        //when statement is similar to switch
         if (q?.Awnser==q?.correctAwnser){
         "you were right"
     }else{
@@ -39,7 +41,11 @@ class Quest {
 
     val correctAwnser="42"
     fun print_result (){
-        println("hello $correctAwnser")
+
+        when (Awnser) {
+            correctAwnser -> println("you were right")
+            else -> println("try again")
+        }
     }
 
 }

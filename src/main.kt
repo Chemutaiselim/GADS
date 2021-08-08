@@ -2,10 +2,13 @@ fun main (args: Array<String>){
     // it has a function, main and the variable args which isi an array of string.
 
     var q= Question()
-    //to use the question class
+    //to use the question class declare it on the function
+
     println("Hello, World")
 
     q.Awnser="42"
+    q.display()
+    //you have to call the function from class in ourder to use it
 
     println("You said the awnser is ${q.Awnser}")
    //This string template combines a compound variable.
