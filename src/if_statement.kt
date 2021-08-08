@@ -18,13 +18,17 @@ fun main(args:Array<String>) {
     //q.Awnser=null
     q?.Awnser="42"
 
-    var message=if (q?.Awnser==q?.correctAwnser){
+    var message=
+        //Kotlin doesnt come with a switch statement, it instead uses when.
+        //WE can replace the if with when.
+        if (q?.Awnser==q?.correctAwnser){
         "you were right"
     }else{
         "try again"
     }
 //in kotlin an if statement can be a declared as a variable
     println(message)
+    q?.print_result()
 }
 class Quest {
     var Awnser:String?=null
@@ -34,7 +38,7 @@ class Quest {
     // hence we can initialize the answer to be null
 
     val correctAwnser="42"
-    fun display (){
+    fun print_result (){
         println("hello $correctAwnser")
     }
 
