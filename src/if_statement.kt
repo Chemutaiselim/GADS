@@ -1,3 +1,5 @@
+import java.lang.NumberFormatException
+
 fun main(args:Array<String>) {
    //var q:Quest?=null
     var q = Quest()
@@ -17,7 +19,8 @@ fun main(args:Array<String>) {
     //if (q.Awnser!=null){}
     
     //q.Awnser=null
-    q?.Awnser="42"
+
+    q?.Awnser="Four"
 
     var message=
         //Kotlin doesnt come with a switch statement, it instead uses when.
@@ -30,7 +33,20 @@ fun main(args:Array<String>) {
     }
 //in kotlin an if statement can be a declared as a variable
     println(message)
+
     q?.print_result()
+    //to extract an integer, we use:
+
+    //it will succeed if we can parse the string value to an integer
+    //it will throw exception if we cant
+
+    val number:Int?= try{
+        Integer.parseInt(q.Awnser)
+    }catch (e:NumberFormatException){
+        null
+    }
+    println(number)
+
 }
 class Quest {
     var Awnser:String?=null
