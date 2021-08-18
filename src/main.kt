@@ -1,5 +1,5 @@
 fun main (args: Array<String>){
-    // it has a function, main and the variable args which isi an array of string.
+    // it has a function, rsk.main and the variable args which isi an array of string.
 
     var q= Question()
     //to use the question class declare it on the function
