@@ -16,7 +16,7 @@ package rsk
     //if the function doesnt have a return value then we simply leave off the return type
     //there is no void return type in kotlin
 
-//the rsk.main function
+//the rsk.rsk.main function
 fun main (args:Array<String>){
     //this function has no return value
     //it takes a parameter, in this case its called args
