@@ -14,7 +14,7 @@ fun main(args:Array<String>){
   we dont need to use dot and brackets after using the infix lable
    */
 
-    val h5=h1 + h2
+    //val h5=h1 + h2
 
     println(h3.Name)
     println(h4.Name)
@@ -36,7 +36,7 @@ fun Header.plus(other:Header):Header{
 infix fun Header.plus2(other:Header):Header{
     return Header(this.Name+other.Name)
 }
+ infix fun Header.plus3(other:Header):Header{
 
-operator infix fun Header.plus3(other:Header):Header{
     return Header(this.Name+other.Name)
 }
